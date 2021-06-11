@@ -1,0 +1,11 @@
+import "@ui5/webcomponents-fiori/dist/ShellBar";
+import "@ui5/webcomponents/dist/Avatar";
+import "@ui5/webcomponents/dist/Button";
+import "@ui5/webcomponents/dist/Input";
+import "@ui5/webcomponents-icons/dist/shipping-status";
+import "@ui5/webcomponents-icons/dist/home";
+import "@ui5/webcomponents-icons/dist/search";
+import "@ui5/webcomponents-icons/dist/add";
+import "@ui5/webcomponents-icons/dist/full-screen";
+import "@ui5/webcomponents-icons/dist/decline";
+import "@ui5/webcomponents-fiori/dist/FlexibleColumnLayout";

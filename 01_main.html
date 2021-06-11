@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_z_tckt</title>
+  </head>
+  <body>
+    <ui5-shellbar
+      primary-title="z_tckt"
+      secondary-title="Transaction Description"
+    >
+      <!-- <ui5-avatar slot="profile" icon="employee"></ui5-avatar> -->
+      <!-- <img slot="logo" src="../../../assets/images/sap-logo-svg.svg" /> -->
+      <ui5-button icon="home" slot="startButton"></ui5-button>
+      <!-- <ui5-input
+        slot="searchField"
+        placeholder="Enter search criteria ..."
+      ></ui5-input> -->
+    </ui5-shellbar>
+
+    <!-- Table flex -->
+    <ui5-flexible-column-layout id="fcl">
+      <!-- start column -->
+      <div slot="startColumn">
+        <!-- <ui5-shellbar primary-title="Dep. New York, USA"> </ui5-shellbar> -->
+
+        <ui5-list id="col1list" header-text="Auftrag" mode="SingleSelect">
+          <!-- Input -->
+          <ui5-input
+            id="searchInput"
+            placeholder="Enter search criteria ..."
+            style="width: 100%"
+          >
+            <ui5-icon id="searchIcon" slot="icon" name="search"></ui5-icon>
+          </ui5-input>
+
+          <ui5-li
+            icon="shipping-status"
+            description="C_ISD-5542 INTRASTAT Deltachem"
+            info="ISD-5542"
+            info-state="Success"
+            >C33K927059</ui5-li
+          >
+          <ui5-li
+            icon="shipping-status"
+            description="C_ISD-5542 INTRASTAT Deltachem"
+            info="ISD-5542"
+            info-state="Success"
+            >C33K927059</ui5-li
+          >
+          <ui5-li
+            icon="shipping-status"
+            description="C_ISD-5542 INTRASTAT Deltachem"
+            info="ISD-5542"
+            info-state="Success"
+            >C33K927059</ui5-li
+          >
+          <ui5-li
+            icon="shipping-status"
+            description="C_ISD-5542 INTRASTAT Deltachem"
+            info="ISD-5542"
+            info-state="Success"
+            >C33K927059</ui5-li
+          >
+        </ui5-list>
+      </div>
+
+      <!-- middle column -->
+      <div slot="midColumn">
+        <div class="colHeader">
+          <ui5-button design="Emphasized">Edit</ui5-button>
+          <ui5-button design="Transparent" icon="add"></ui5-button>
+          <ui5-button
+            id="fullscreenMidColumn"
+            design="Transparent"
+            icon="full-screen"
+          ></ui5-button>
+          <ui5-button
+            id="closeMidColumn"
+            icon="decline"
+            design="Transparent"
+          ></ui5-button>
+        </div>
+
+        <ui5-list id="col2list" header-text="Details"> </ui5-list>
+      </div>
+
+      <!-- end column -->
+      <div slot="endColumn">
+        <div class="colHeader">
+          <ui5-button design="Emphasized">Edit</ui5-button>
+          <ui5-button design="Transparent" icon="add"></ui5-button>
+          <ui5-button
+            id="fullscreenEndColumn"
+            design="Transparent"
+            icon="full-screen"
+          ></ui5-button>
+          <ui5-button
+            id="closeEndColumn"
+            icon="decline"
+            design="Transparent"
+          ></ui5-button>
+        </div>
+
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod..."
+        </p>
+      </div>
+    </ui5-flexible-column-layout>
+
+    <script>
+      col1list.addEventListener("item-click", function (e) {
+        fcl.layout = "TwoColumnsMidExpanded";
+      });
+
+      col2list.addEventListener("item-click", function (e) {
+        fcl.layout = "ThreeColumnsEndExpanded";
+      });
+
+      closeMidColumn.addEventListener("click", function (e) {
+        fcl.layout = "OneColumn";
+      });
+      fullscreenMidColumn.addEventListener("click", function (e) {
+        fcl.layout = "MidColumnFullscreen";
+      });
+
+      fullscreenEndColumn.addEventListener("click", function (e) {
+        fcl.layout = "EndColumnFullscreen";
+      });
+
+      closeEndColumn.addEventListener("click", function (e) {
+        fcl.layout = "TwoColumnsMidExpanded";
+      });
+    </script>
+
+    <!-- Table flex -->
+
+    <script type="module" src="/01_main.js"></script>
+  </body>
+</html>
